@@ -1,5 +1,5 @@
 ---
-const { title = "Kalifa Sankara", children } = Astro.props;
+const { title = "Kalifa Sankara" } = Astro.props;
 ---
 
 <html lang="fr">
@@ -40,10 +40,13 @@ const { title = "Kalifa Sankara", children } = Astro.props;
       <nav>
         <a href="./">Accueil</a>
         <a href="./presentation">Présentation</a>
+        <a href="./projets">Projets</a>
+        <a href="./contact">Contact</a> 
       </nav>
     </header>
+
     <main>
-      {children}
+      <slot /> <!-- ✅ Ceci remplace {children} dans Astro -->
     </main>
   </body>
 </html>
