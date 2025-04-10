@@ -1,16 +1,20 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { withBase } from '../utils/path';
 ---
 
 <BaseLayout title="Présentation – Kalifa Sankara">
   <h1>Présentation</h1>
+
+  <img src={withBase('images/pp_kalifa_1.PNG')} alt="Portrait Kalifa Sankara" style="max-width: 300px;" />
+
   <p>
-    Dr. Sambo Kalifa Sankara est un expert en intelligence artificielle appliquée à l’agroalimentaire.
+    Dr. Kalifa Sankara est un expert en intelligence artificielle appliquée à l’agroalimentaire. Il œuvre à la fois sur le plan technique et stratégique, en contribuant activement au développement durable en Afrique.
   </p>
+
   <p>
-    Titulaire d’un doctorat, il travaille sur des projets innovants mêlant IA, énergie solaire et développement durable, notamment en Afrique.
+    Ses projets mêlent IA, énergie solaire, analyse de données agricoles et formations pour les jeunes. Il est également responsable Business Intelligence chez Eni France.
   </p>
-  <p>
-    Il intervient régulièrement en tant que conférencier dans des événements internationaux, et occupe actuellement le poste de responsable Business Intelligence chez Eni France.
-  </p>
+
+  <a href="/kalifa-sankara/contact" class="button">Me contacter</a>
 </BaseLayout>

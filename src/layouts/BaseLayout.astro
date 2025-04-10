@@ -7,46 +7,164 @@ const { title = "Kalifa Sankara" } = Astro.props;
     <meta charset="UTF-8" />
     <title>{title}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
     <style>
-      body {
-        font-family: Arial, sans-serif;
+      :root {
+        --color-accent-green: #60DB8C;
+        --color-accent-red: #E06666;
+        --color-accent-blue: #3AAED8;
+        --color-text: #f5f5f5;
+        --bg-dark-1: #1a1a1a;
+        --bg-dark-2: #2a2a2a;
+      }
+
+      html, body {
         margin: 0;
         padding: 0;
+        min-height: 100%;
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(-45deg, var(--bg-dark-1), var(--bg-dark-2), var(--bg-dark-1), var(--bg-dark-2));
+        background-size: 400% 400%;
+        animation: gradientAnimation 18s ease infinite;
+        color: var(--color-text);
       }
+
+      @keyframes gradientAnimation {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+
+      .wrapper {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
       header {
-        background-color: #222;
-        color: white;
-        padding: 1rem;
+        padding: 1.5rem 2rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        border-bottom: 1px solid var(--color-accent-red);
+        background-color: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(8px);
       }
+
+      header .brand {
+        font-size: 2rem;
+        font-weight: 700;
+        background: linear-gradient(90deg, var(--color-accent-blue), var(--color-accent-green));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      nav {
+        display: flex;
+        gap: 1.5rem;
+      }
+
       nav a {
-        color: white;
         text-decoration: none;
-        margin-left: 1rem;
+        color: var(--color-text);
+        font-weight: 600;
+        transition: color 0.3s ease;
       }
+
       nav a:hover {
-        text-decoration: underline;
+        color: var(--color-accent-blue);
       }
+
       main {
+        flex-grow: 1;
+        max-width: 960px;
         padding: 2rem;
+        margin: 0 auto;
+      }
+
+      footer {
+        padding: 2rem;
+        color: var(--color-text);
+        border-top: 1px solid #444;
+        background-color: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(6px);
+      }
+
+      .footer-content {
+        max-width: 960px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .footer-content nav {
+        display: flex;
+        gap: 1.5rem;
+      }
+
+      .footer-content a {
+        color: var(--color-accent-green);
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+
+      .footer-content a:hover {
+        color: var(--color-accent-red);
+      }
+
+      /* Bouton global */
+      .button {
+        display: inline-block;
+        background-color: var(--color-accent-green);
+        color: #000;
+        padding: 0.6rem 1.2rem;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        box-shadow: 0 0 10px var(--color-accent-green);
+        transition: 0.3s ease;
+      }
+
+      .button:hover {
+        box-shadow: 0 0 20px var(--color-accent-red);
+        background-color: var(--color-accent-red);
+        color: white;
       }
     </style>
   </head>
-  <body>
-    <header>
-      <div><strong>Kalifa Sankara</strong></div>
-      <nav>
-        <a href="./">Accueil</a>
-        <a href="./presentation">Présentation</a>
-        <a href="./projets">Projets</a>
-        <a href="./contact">Contact</a> 
-      </nav>
-    </header>
 
-    <main>
-      <slot /> <!-- ✅ Ceci remplace {children} dans Astro -->
-    </main>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="brand">Kalifa Sankara</div>
+        <nav>
+          <a href="/kalifa-sankara/">Accueil</a>
+          <a href="/kalifa-sankara/presentation">Présentation</a>
+          <a href="/kalifa-sankara/expertises">Expertises</a>
+          <a href="/kalifa-sankara/projets">Projets</a>
+          <a href="/kalifa-sankara/conferences">Conférences</a>
+          <a href="/kalifa-sankara/contact">Contact</a>
+        </nav>
+      </header>
+
+      <main>
+        <slot />
+      </main>
+
+      <footer>
+        <div class="footer-content">
+          <p>&copy; {new Date().getFullYear()} Kalifa Sankara</p>
+          <nav>
+            <a href="https://www.linkedin.com/in/kalifa-sankara" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="/kalifa-sankara/cv/kalifa_sankara_cv.pdf" target="_blank">CV</a>
+          </nav>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

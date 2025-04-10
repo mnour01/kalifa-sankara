@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Conférences – Kalifa Sankara">
+  <section class="timeline">
+    <h1>Conférences & Interventions</h1>
+
+    <div class="event">
+      <div class="date">Mars 2024</div>
+      <div class="content">
+        <h2>Forum Africain de l'IA – Dakar</h2>
+        <p>Intervention sur l’utilisation de l’intelligence artificielle dans l’optimisation des chaînes de production agricole en milieu rural.</p>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="date">Novembre 2023</div>
+      <div class="content">
+        <h2>Salon EuroAgroData – Paris</h2>
+        <p>Présentation d’un projet d’analyse prédictive des sols en partenariat avec l’INRAE et AgriLab.</p>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="date">Juillet 2023</div>
+      <div class="content">
+        <h2>Université de Ouagadougou</h2>
+        <p>Conférence autour des enjeux de la souveraineté alimentaire et de la formation des jeunes scientifiques africains.</p>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .timeline {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 3rem 1rem;
+    }
+
+    .timeline h1 {
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      background: linear-gradient(90deg, var(--color-accent-green), var(--color-accent-blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .event {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+      align-items: flex-start;
+      border-left: 4px solid var(--color-accent-blue);
+      padding-left: 1.5rem;
+    }
+
+    .date {
+      font-weight: bold;
+      color: var(--color-accent-red);
+      min-width: 120px;
+    }
+
+    .content h2 {
+      margin: 0 0 0.5rem;
+      font-size: 1.3rem;
+      color: var(--color-accent-green);
+    }
+
+    .content p {
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .event {
+        flex-direction: column;
+        border-left: none;
+        border-top: 2px solid var(--color-accent-blue);
+        padding-left: 0;
+        padding-top: 1rem;
+      }
+
+      .date {
+        margin-bottom: 0.5rem;
+      }
+    }
+  </style>
+</BaseLayout>

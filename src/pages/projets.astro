@@ -1,42 +1,35 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
 ---
 
 <BaseLayout title="Projets – Kalifa Sankara">
-  <h1>Projets en Intelligence Artificielle & Agroalimentaire</h1>
-  <p>Voici une sélection des projets portés ou encadrés par Dr. Kalifa Sankara.</p>
+  <h1>Projets</h1>
+  <p>Voici quelques-uns des projets portés ou encadrés par Dr. Kalifa Sankara :</p>
 
   <div class="grid">
-    <div class="card">
-      <h2>IA & Production Solaire</h2>
-      <p>Modélisation prédictive pour optimiser le stockage d'énergie solaire en Afrique de l’Ouest.</p>
-    </div>
-    <div class="card">
-      <h2>Agrodata Burkina</h2>
-      <p>Plateforme de suivi de culture intelligente basée sur des données climatiques et de terrain.</p>
-    </div>
-    <div class="card">
-      <h2>Formation Jeunes</h2>
-      <p>Création d’un centre d’accueil numérique pour initier les jeunes à l’IA appliquée à l’agriculture.</p>
-    </div>
+    <ProjectCard
+      title="IA & Production Solaire"
+      description="Modélisation prédictive pour optimiser le stockage de l’énergie solaire en Afrique de l’Ouest."
+    />
+
+    <ProjectCard
+      title="Agrodata Burkina"
+      description="Plateforme de suivi intelligent des cultures basée sur des données locales, climatiques et satellites."
+    />
+
+    <ProjectCard
+      title="Centre de Formation Jeunesse"
+      description="Développement d’un programme éducatif IA pour les jeunes dans les zones rurales africaines."
+    />
   </div>
 
   <style>
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
+      gap: 2rem;
       margin-top: 2rem;
-    }
-    .card {
-      padding: 1.5rem;
-      background: #f9f9f9;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      transition: transform 0.2s ease;
-    }
-    .card:hover {
-      transform: translateY(-4px);
     }
   </style>
 </BaseLayout>

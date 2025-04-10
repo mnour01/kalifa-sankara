@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ExpertiseCard from '../components/ExpertiseCard.astro';
+---
+
+<BaseLayout title="Expertises – Kalifa Sankara">
+  <h1>Domaines d'expertise</h1>
+
+  <div class="grid">
+    <ExpertiseCard
+      title="Intelligence Artificielle"
+      icon="🤖"
+      description="Modélisation, machine learning et IA appliquée à la production et à la logistique agroalimentaire."
+    />
+
+    <ExpertiseCard
+      title="Politiques agricoles"
+      icon="🌾"
+      description="Analyse de politiques publiques, souveraineté alimentaire et planification agricole stratégique."
+    />
+
+    <ExpertiseCard
+      title="Énergie durable"
+      icon="☀️"
+      description="Conception de systèmes solaires intelligents pour les zones rurales et isolées."
+    />
+
+    <ExpertiseCard
+      title="Data Science"
+      icon="📊"
+      description="Analyse de données agricoles, prévisions climatiques et tableaux de bord décisionnels."
+    />
+
+    <ExpertiseCard
+      title="Formation & jeunesse"
+      icon="🎓"
+      description="Conception de programmes pédagogiques autour des technologies et de la transition numérique."
+    />
+  </div>
+
+  <style>
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+      background: linear-gradient(90deg, var(--color-accent-blue), var(--color-accent-green));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+  </style>
+</BaseLayout>
