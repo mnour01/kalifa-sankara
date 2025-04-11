@@ -4,17 +4,80 @@ import { withBase } from '../utils/path';
 ---
 
 <BaseLayout title="Présentation – Kalifa Sankara">
-  <h1>Présentation</h1>
+  <section class="presentation">
+    <h1>À propos de Kalifa Sankara</h1>
+    <div class="bio">
+      <img src={withBase('images/pp_kalifa_1.PNG')} alt="Kalifa Sankara" />
+      <div>
+        <p>
+          Docteur en intelligence artificielle appliquée à l'agriculture, Kalifa Sankara est un expert reconnu dans la transformation des systèmes alimentaires grâce aux technologies durables.
+        </p>
+        <p>
+          Il accompagne les institutions publiques et privées dans la mise en place de politiques intelligentes pour la transition énergétique, l'autonomie alimentaire et la valorisation des données agricoles.
+        </p>
+        <p>
+          Ses travaux l'ont mené à intervenir dans de nombreux colloques internationaux, à enseigner dans des universités africaines et européennes, et à conseiller des gouvernements sur les enjeux de souveraineté alimentaire.
+        </p>
+      </div>
+    </div>
+  </section>
 
-  <img src={withBase('images/pp_kalifa_1.PNG')} alt="Portrait Kalifa Sankara" style="max-width: 300px;" />
+  <style>
+    :root {
+      --bg-light: #F4F6F8;
+      --text-dark: #1E1E1E;
+    }
 
-  <p>
-    Dr. Kalifa Sankara est un expert en intelligence artificielle appliquée à l’agroalimentaire. Il œuvre à la fois sur le plan technique et stratégique, en contribuant activement au développement durable en Afrique.
-  </p>
+    .presentation {
+      background: var(--bg-light);
+      color: var(--text-dark);
+      padding: 3rem 2rem;
+      border-radius: 12px;
+    }
 
-  <p>
-    Ses projets mêlent IA, énergie solaire, analyse de données agricoles et formations pour les jeunes. Il est également responsable Business Intelligence chez Eni France.
-  </p>
+    .presentation h1 {
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+      font-family: 'Orbitron', sans-serif;
+      color: var(--accent-green);
+      text-align: center;
+    }
 
-  <a href="/kalifa-sankara/contact" class="button">Me contacter</a>
+    .bio {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .bio img {
+      max-width: 220px;
+      border-radius: 16px;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .bio img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.25);
+    }
+
+    .bio div {
+      flex: 1 1 300px;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 768px) {
+      .bio {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .bio img {
+        max-width: 160px;
+      }
+    }
+  </style>
 </BaseLayout>
