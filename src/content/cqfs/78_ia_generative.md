@@ -1,0 +1,12 @@
+---
+title: "30-03-2026 | Les voitures autonomes suite te fin : Ce qu’il faut savoir sur les capteurs et la perception des voitures autonomes"
+rubrique: "IA"
+description: "Derrière le fonctionnement des voitures autonomes se cache une technologie souvent méconnue mais pourtant centrale. La perception de l’environnement. Contrairement à un conducteur humain, le véhicule ne voit pas au sens classique. Il analyse son environnement à travers un ensemble de capteurs qui traduisent le réel en données exploitables.
+
+Ces systèmes reposent principalement sur des technologies comme le lidar, les radars et les caméras embarquées. Le lidar permet de reconstruire une vision en trois dimensions de l’environnement, tandis que les caméras identifient les objets, les panneaux ou les piétons grâce à des modèles d’intelligence artificielle. L’ensemble de ces informations est ensuite traité en temps réel pour prendre des décisions de conduite.
+
+Ce point est essentiel pour comprendre les limites actuelles de la technologie. La performance des voitures autonomes dépend fortement de la qualité de ces capteurs et de leur capacité à fonctionner dans des conditions complexes, comme la pluie, la poussière ou des environnements peu structurés.
+
+Dans le contexte africain, cette question est encore plus déterminante. Les réalités locales, notamment la variabilité des routes ou des conditions climatiques, imposent une réflexion spécifique sur l’adaptation de ces technologies. Cela rappelle que toute innovation repose aussi sur la capacité à maîtriser les briques technologiques qui la rendent possible."
+date: 2025-07-01
+---
