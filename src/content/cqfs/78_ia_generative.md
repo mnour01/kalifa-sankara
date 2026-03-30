@@ -1,5 +1,5 @@
 ---
-title: "30-03-2026 | Les voitures autonomes suite te fin : Ce qu’il faut savoir sur les capteurs et la perception des voitures autonomes"
+title: "30-03-2026 | Les voitures autonomes : Ce qu’il faut savoir sur les capteurs et la perception"
 rubrique: "IA"
 description: "Derrière le fonctionnement des voitures autonomes se cache une technologie souvent méconnue mais pourtant centrale. La perception de l’environnement. Contrairement à un conducteur humain, le véhicule ne voit pas au sens classique. Il analyse son environnement à travers un ensemble de capteurs qui traduisent le réel en données exploitables.
 
